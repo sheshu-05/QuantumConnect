@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Failed verification</title>
+</head>
+<body>
+    <div id="content" class="text-center mt-5 md:w-1/2 mx-auto">
+        <div th:replace="message::messagebox"></div>
+        <a th:href="@{'/login'}" class="bg-gray-900 mt-2 text-white px-3 py-2 rounded">Login</a>
+    </div>
+    <script></script>
+</body>
+</html>

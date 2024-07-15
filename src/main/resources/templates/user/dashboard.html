@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content}, ~{::title}, ~{::script})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${loggedInUser.name}+'| Dashboard'">Dashboard page</title>
+</head>
+
+<body>
+    <div id="content">
+        <!-- if user is logged in: sidebar-->
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+        <div class="sm:pl-64 pt-20" style="height: 1000px;">
+            <div class="flex justify-center flex-col items-center">
+                <h1 class="text-5xl">Welcome to Dashboard page</h1>
+            </div>
+        </div>
+    </div>
+
+    <script></script>
+</body>
+
+</html>
